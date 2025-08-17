@@ -3,6 +3,8 @@ import 'package:logic_learning/screens/image_selection.dart';
 import 'package:logic_learning/screens/multi_selection.dart';
 import 'package:logic_learning/screens/single_selection.dart';
 import 'package:logic_learning/screens/toggle_selection.dart';
+import 'package:logic_learning/screens/upload_image.dart';
+import 'package:logic_learning/screens/upload_multi_images.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -17,7 +19,9 @@ class _RootState extends State<Root> {
     SingleSelection(),
     ImageSelection(),
     ToggleSelection(),
-    MultiSelection()
+    MultiSelection(),
+    UploadImage(),
+    UploadMultiImages(),
   ];
   int selectedIndex = 0;
 
