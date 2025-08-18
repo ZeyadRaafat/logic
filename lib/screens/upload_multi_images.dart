@@ -16,7 +16,9 @@ class _UploadMultiImagesState extends State<UploadMultiImages> {
   Future<void> _pickImages() async {
     final List<XFile> pickedImages = await ImagePicker().pickMultiImage(maxWidth: 600);
 
-    if(pickedImages.length > 3) {
+    if (!mounted) return;
+
+    if (pickedImages.length > 3) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('You can only select up to 3 images.')),
       );
